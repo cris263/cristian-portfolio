@@ -1,0 +1,29 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" fill="#16161e"/>
+  <rect x="20" y="20" width="360" height="160" rx="12" fill="#24283b"/>
+  
+  <rect x="30" y="30" width="340" height="20" rx="4" fill="#414868"/>
+  <circle cx="45" cy="40" r="3" fill="#f7768e"/>
+  <circle cx="55" cy="40" r="3" fill="#e0af68"/>
+  <circle cx="65" cy="40" r="3" fill="#9ece6a"/>
+  <text x="200" y="45" text-anchor="middle" fill="#c9d1d9" font-family="monospace" font-size="10">Sistema de Recomendación</text>
+  
+  <circle cx="100" cy="80" r="12" fill="#7aa2f7"/>
+  <circle cx="150" cy="70" r="12" fill="#bb9af7"/>
+  <circle cx="200" cy="90" r="12" fill="#f7768e"/>
+  <circle cx="250" cy="75" r="12" fill="#9ece6a"/>
+  <circle cx="300" cy="85" r="12" fill="#e0af68"/>
+  
+  <line x1="112" y1="80" x2="138" y2="70" stroke="#565f89" stroke-width="2"/>
+  <line x1="162" y1="70" x2="188" y2="90" stroke="#565f89" stroke-width="2"/>
+  <line x1="212" y1="90" x2="238" y2="75" stroke="#565f89" stroke-width="2"/>
+  <line x1="262" y1="75" x2="288" y2="85" stroke="#565f89" stroke-width="2"/>
+  <line x1="100" y1="92" x2="200" y2="102" stroke="#565f89" stroke-width="2"/>
+  
+  <text x="40" y="120" fill="#9ece6a" font-family="monospace" font-size="8">&gt; Generando recomendaciones...</text>
+  <text x="40" y="135" fill="#7aa2f7" font-family="monospace" font-size="8">&gt; Analizando preferencias de usuario</text>
+  <text x="40" y="150" fill="#e0af68" font-family="monospace" font-size="8">&gt; Algoritmo de grafos ejecutado</text>
+  <text x="40" y="165" fill="#22c55e" font-family="monospace" font-size="8">&gt; 5 películas recomendadas</text>
+  
+  <text x="200" y="195" text-anchor="middle" fill="#a9b1d6" font-family="Inter, sans-serif" font-size="10">C++ • MySQL • Estructuras de Datos</text>
+</svg>

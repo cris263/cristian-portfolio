@@ -1,0 +1,337 @@
+---
+
+---
+
+<section id="sobre-mi" class="about">
+  <div class="container">
+    <div class="about-content">
+      <div class="about-text">
+        <div class="section-header">
+          <h2 class="section-title">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+            Sobre mí
+          </h2>
+        </div>
+
+        <div class="about-description">
+          <p>
+            Soy Cristian, estudiante de Ingeniería apasionado por el desarrollo de software. 
+            Llevo 3 años explorando y dominando <span class="highlight">tecnologías de vanguardia</span> 
+            en el ecosistema de desarrollo full stack.
+          </p>
+
+          <p>
+            Mi experiencia incluye <span class="highlight">el desarrollo de sistemas administrativos 
+            para instituciones educativas</span>, donde he implementado soluciones completas 
+            usando React, SpringBoot y arquitecturas modernas.
+          </p>
+
+          <p>
+            Me especializo en <span class="highlight">arquitectura de software, estructuras de datos 
+            y algoritmos</span>. Mi objetivo es crear soluciones tecnológicas eficientes que 
+            resuelvan problemas reales, desde aplicaciones web hasta sistemas de recomendación.
+          </p>
+        </div>
+
+        <div class="about-stats">
+          <div class="stat-item">
+            <span class="stat-number highlight">3</span>
+            <span class="stat-label">Años de experiencia</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number highlight">12+</span>
+            <span class="stat-label">Tecnologías dominadas</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number highlight">3</span>
+            <span class="stat-label">Proyectos completados</span>
+          </div>
+        </div>
+
+        <div class="about-links">
+          <a href="#" class="btn">Sobre mí</a>
+          <a href="#contacto" class="btn btn-primary">Contacto</a>
+        </div>
+      </div>
+
+      <div class="about-image">
+        <div class="image-container">
+          <img src="./foto.jpg" alt="Miguel Ángel trabajando" class="about-img" />
+          <div class="image-decoration">
+            <div class="decoration-item decoration-1">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="16,18 22,12 16,6"></polyline>
+                <polyline points="8,6 2,12 8,18"></polyline>
+              </svg>
+            </div>
+            <div class="decoration-item decoration-2">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                <line x1="8" y1="21" x2="16" y2="21"></line>
+                <line x1="12" y1="17" x2="12" y2="21"></line>
+              </svg>
+            </div>
+            <div class="decoration-item decoration-3">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #16161e 0%, #1a1b26 100%);
+    position: relative;
+  }
+
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 4rem;
+    align-items: center;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #c9d1d9;
+    margin-bottom: 1rem;
+  }
+
+  .section-title svg {
+    color: #7aa2f7;
+  }
+
+  .about-description {
+    margin-bottom: 3rem;
+  }
+
+  .about-description p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #a9b1d6;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: rgba(30, 31, 44, 0.5);
+    border: 1px solid rgba(65, 72, 104, 0.3);
+    border-radius: 1rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  .stat-number {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.875rem;
+    color: #7c7c7c;
+  }
+
+  .about-links {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .about-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+
+  .image-container {
+    position: relative;
+    width: 350px;
+    height: 400px;
+  }
+
+  .about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+    border: 2px solid rgba(122, 162, 247, 0.3);
+  }
+
+  .image-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+
+  .decoration-item {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: rgba(122, 162, 247, 0.1);
+    border: 2px solid rgba(122, 162, 247, 0.3);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7aa2f7;
+    backdrop-filter: blur(10px);
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .decoration-1 {
+    top: -20px;
+    right: -20px;
+    animation-delay: 0s;
+  }
+
+  .decoration-2 {
+    bottom: 50px;
+    left: -30px;
+    animation-delay: 2s;
+  }
+
+  .decoration-3 {
+    top: 40%;
+    right: -40px;
+    animation-delay: 4s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  .about::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(122, 162, 247, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .about-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  @media (max-width: 968px) {
+    .about-content {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      text-align: center;
+    }
+
+    .about-image {
+      order: -1;
+    }
+
+    .image-container {
+      width: 280px;
+      height: 320px;
+    }
+
+    .about-stats {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      padding: 1.5rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .about {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .about-description p {
+      font-size: 1rem;
+    }
+
+    .about-stats {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .stat-number {
+      font-size: 1.5rem;
+    }
+
+    .about-links {
+      justify-content: center;
+    }
+
+    .decoration-item {
+      width: 50px;
+      height: 50px;
+    }
+
+    .decoration-1 {
+      top: -15px;
+      right: -15px;
+    }
+
+    .decoration-2 {
+      bottom: 30px;
+      left: -20px;
+    }
+
+    .decoration-3 {
+      top: 30%;
+      right: -25px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .about-links {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      width: 200px;
+      justify-content: center;
+    }
+  }
+</style>

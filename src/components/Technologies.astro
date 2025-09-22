@@ -1,0 +1,448 @@
+---
+const technologies = [
+  {
+    name: "JavaScript",
+    icon: "🟨",
+    level: "Avanzado",
+    years: "2.5+",
+    color: "#f7df1e"
+  },
+  {
+    name: "React",
+    icon: "⚛️",
+    level: "Avanzado",
+    years: "2.5+",
+    color: "#61dafb"
+  },
+  {
+    name: "Java",
+    icon: "☕",
+    level: "Avanzado",
+    years: "2.5+",
+    color: "#ed8b00"
+  },
+  {
+    name: "SpringBoot",
+    icon: "🍃",
+    level: "Avanzado",
+    years: "2.5+",
+    color: "#6db33f"
+  },
+  {
+    name: ".NET",
+    icon: "🔷",
+    level: "Intermedio",
+    years: "2.5+",
+    color: "#512bd4"
+  },
+  {
+    name: "C++",
+    icon: "⚡",
+    level: "Intermedio",
+    years: "2.5+",
+    color: "#00599c"
+  },
+  {
+    name: "Python",
+    icon: "🐍",
+    level: "Intermedio",
+    years: "2.5+",
+    color: "#3776ab"
+  },
+  {
+    name: "Go",
+    icon: "🔷",
+    level: "Básico",
+    years: "2.5+",
+    color: "#00add8"
+  },
+  {
+    name: "PHP",
+    icon: "🐘",
+    level: "Intermedio",
+    years: "2.5+",
+    color: "#777bb4"
+  },
+  {
+    name: "Tailwind CSS",
+    icon: "🎨",
+    level: "Avanzado",
+    years: "2.5+",
+    color: "#06b6d4"
+  },
+  {
+    name: "MySQL",
+    icon: "🗄️",
+    level: "Avanzado",
+    years: "2.5+",
+    color: "#4479a1"
+  },
+  {
+    name: "Git",
+    icon: "🌿",
+    level: "Avanzado",
+    years: "2.5+",
+    color: "#f05032"
+  }
+];
+
+const categories = [
+  {
+    title: "Frontend",
+    techs: ["JavaScript", "React", "Tailwind CSS", "PHP"],
+    icon: "💻"
+  },
+  {
+    title: "Backend",
+    techs: ["Java", "SpringBoot", ".NET", "Python", "Go"],
+    icon: "⚙️"
+  },
+  {
+    title: "Base de Datos & Herramientas",
+    techs: ["MySQL", "Git", "C++"],
+    icon: "🛠️"
+  }
+];
+---
+
+<section id="tecnologias" class="technologies">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        Tecnologías
+      </h2>
+      <p class="section-description">
+        Las herramientas y tecnologías que domino para crear experiencias web excepcionales
+      </p>
+    </div>
+
+    <div class="tech-categories">
+      {categories.map((category, index) => (
+        <div class="tech-category" data-aos="fade-up" data-aos-delay={index * 100}>
+          <div class="category-header">
+            <span class="category-icon">{category.icon}</span>
+            <h3 class="category-title">{category.title}</h3>
+          </div>
+          <div class="category-techs">
+            {category.techs.map(techName => {
+              const tech = technologies.find(t => t.name === techName);
+              return tech && (
+                <div class="tech-item">
+                  <span class="tech-icon">{tech.icon}</span>
+                  <span class="tech-name">{tech.name}</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="tech-grid">
+      {technologies.map((tech, index) => (
+        <div class="tech-card" data-aos="zoom-in" data-aos-delay={index * 50}>
+          <div class="tech-card-header">
+            <span class="tech-card-icon">{tech.icon}</span>
+            <div class="tech-info">
+              <h4 class="tech-card-name">{tech.name}</h4>
+              <span class="tech-level">{tech.level}</span>
+            </div>
+          </div>
+          
+          <div class="tech-details">
+            <div class="tech-years">
+              <span class="years-label">Experiencia</span>
+              <span class="years-value highlight">{tech.years} años</span>
+            </div>
+            
+            <div class="tech-progress">
+              <div class="progress-bar">
+                <div 
+                  class="progress-fill" 
+                  style={`--progress: ${tech.level === 'Experto' ? '95%' : tech.level === 'Avanzado' ? '80%' : '65%'}; --color: ${tech.color}`}
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .technologies {
+    padding: 6rem 0;
+    background: #1a1b26;
+    position: relative;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #c9d1d9;
+    margin-bottom: 1rem;
+  }
+
+  .section-title svg {
+    color: #7aa2f7;
+  }
+
+  .section-description {
+    font-size: 1.125rem;
+    color: #a9b1d6;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .tech-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .tech-category {
+    background: rgba(30, 31, 44, 0.5);
+    border: 1px solid rgba(65, 72, 104, 0.3);
+    border-radius: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+  }
+
+  .tech-category:hover {
+    transform: translateY(-5px);
+    border-color: rgba(122, 162, 247, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .category-icon {
+    font-size: 2rem;
+  }
+
+  .category-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #c9d1d9;
+  }
+
+  .category-techs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .tech-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(122, 162, 247, 0.1);
+    border: 1px solid rgba(122, 162, 247, 0.3);
+    border-radius: 50px;
+    color: #a9b1d6;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .tech-item:hover {
+    background: rgba(122, 162, 247, 0.2);
+    transform: translateY(-2px);
+  }
+
+  .tech-icon {
+    font-size: 1rem;
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .tech-card {
+    background: rgba(30, 31, 44, 0.5);
+    border: 1px solid rgba(65, 72, 104, 0.3);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .tech-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--color, #7aa2f7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .tech-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(122, 162, 247, 0.5);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  }
+
+  .tech-card:hover::before {
+    opacity: 1;
+  }
+
+  .tech-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .tech-card-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(122, 162, 247, 0.1);
+    border-radius: 0.75rem;
+  }
+
+  .tech-card-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #c9d1d9;
+    margin-bottom: 0.25rem;
+  }
+
+  .tech-level {
+    font-size: 0.875rem;
+    color: #7c7c7c;
+  }
+
+  .tech-details {
+    space-y: 1rem;
+  }
+
+  .tech-years {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .years-label {
+    font-size: 0.875rem;
+    color: #a9b1d6;
+  }
+
+  .years-value {
+    font-weight: 600;
+  }
+
+  .tech-progress {
+    margin-top: 1rem;
+  }
+
+  .progress-bar {
+    width: 100%;
+    height: 6px;
+    background: rgba(65, 72, 104, 0.3);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    width: var(--progress);
+    background: var(--color, #7aa2f7);
+    border-radius: 3px;
+    transition: width 0.8s ease;
+    position: relative;
+  }
+
+  .progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .technologies {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .tech-categories {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .tech-category {
+      padding: 1.5rem;
+    }
+
+    .tech-grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    .tech-card {
+      padding: 1.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .category-techs {
+      gap: 0.5rem;
+    }
+
+    .tech-item {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
+</style>

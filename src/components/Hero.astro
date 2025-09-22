@@ -1,0 +1,279 @@
+---
+
+---
+
+<section id="inicio" class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          Disponible para trabajar
+        </div>
+        
+        <h1 class="hero-title">
+          Hey, soy <span class="highlight">CristianDev</span>
+        </h1>
+        
+         <p class="hero-description">
+           <span class="highlight">+3 años de experiencia. Estudiante de Ingeniería y Desarrollador Full Stack</span> de Villavicencio, Colombia 🇨🇴. 
+           Especializado en el desarrollo de aplicaciones web modernas y arquitectura de software.
+         </p>
+        
+        <div class="hero-buttons">
+          <a href="#contacto" class="btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Contáctame
+          </a>
+          <a href="#" class="btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+              <rect x="2" y="9" width="4" height="12"></rect>
+              <circle cx="4" cy="4" r="2"></circle>
+            </svg>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+      
+      <div class="hero-image">
+        <div class="image-container">
+          <img src="./foto.jpg" alt="CristianDev" class="profile-image" />
+          <div class="image-glow"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="hero-background">
+    <div class="gradient-orb orb-1"></div>
+    <div class="gradient-orb orb-2"></div>
+    <div class="gradient-orb orb-3"></div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 80px;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-text {
+    max-width: 600px;
+  }
+
+  .status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 50px;
+    color: #22c55e;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+  }
+
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .hero-title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: #c9d1d9;
+  }
+
+  .hero-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+    color: #a9b1d6;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-container {
+    position: relative;
+    width: 290px;
+    height: 290px;
+    border-radius:0.5rem;
+
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 2px solid rgba(122, 162, 247, 0.3);
+    position: relative;
+    z-index: 2;
+  }
+
+  .image-glow {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(45deg, #7aa2f7, #bb9af7, #f7768e);
+    border-radius: 2rem;
+    opacity: 0.3;
+    filter: blur(20px);
+    z-index: 1;
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+
+  @keyframes glow {
+    from {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    to {
+      opacity: 0.5;
+      transform: scale(1.05);
+    }
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .gradient-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .orb-1 {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(45deg, #7aa2f7, #bb9af7);
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+
+  .orb-2 {
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(45deg, #f7768e, #ff9e64);
+    top: 60%;
+    right: 20%;
+    animation-delay: 2s;
+  }
+
+  .orb-3 {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #9ece6a, #e0af68);
+    bottom: 20%;
+    left: 60%;
+    animation-delay: 4s;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero {
+      padding-top: 100px;
+      text-align: center;
+    }
+
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+
+    .hero-image {
+      order: -1;
+    }
+
+    .image-container {
+      width: 200px;
+      height: 300px;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+    }
+
+    .hero-description {
+      font-size: 1rem;
+    }
+
+    .hero-buttons {
+      justify-content: center;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .btn {
+      width: 200px;
+      justify-content: center;
+    }
+  }
+</style>

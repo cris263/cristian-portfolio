@@ -1,0 +1,17 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" fill="#1e1f2c"/>
+  <rect x="20" y="20" width="360" height="160" rx="12" fill="#414868"/>
+  
+  <rect x="40" y="40" width="320" height="30" rx="6" fill="#7aa2f7"/>
+  <text x="200" y="60" text-anchor="middle" fill="#1a1b26" font-family="Inter, sans-serif" font-size="14" font-weight="bold">Universidad de los Llanos</text>
+  
+  <rect x="40" y="80" width="100" height="40" rx="4" fill="#9ece6a"/>
+  <rect x="150" y="80" width="100" height="40" rx="4" fill="#f7768e"/>
+  <rect x="260" y="80" width="100" height="40" rx="4" fill="#e0af68"/>
+  
+  <rect x="40" y="130" width="320" height="8" rx="2" fill="#565f89"/>
+  <rect x="40" y="145" width="250" height="8" rx="2" fill="#565f89"/>
+  <rect x="40" y="160" width="200" height="8" rx="2" fill="#565f89"/>
+  
+  <text x="200" y="195" text-anchor="middle" fill="#a9b1d6" font-family="Inter, sans-serif" font-size="10">CESE - Sistema Administrable</text>
+</svg>

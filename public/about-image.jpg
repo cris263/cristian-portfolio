@@ -1,0 +1,9 @@
+<svg width="350" height="400" viewBox="0 0 350 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="350" height="400" rx="32" fill="#1e1f2c"/>
+  <rect x="50" y="50" width="250" height="150" rx="16" fill="#414868"/>
+  <circle cx="175" cy="125" r="30" fill="#7aa2f7"/>
+  <rect x="50" y="220" width="250" height="8" rx="4" fill="#565f89"/>
+  <rect x="50" y="240" width="200" height="8" rx="4" fill="#565f89"/>
+  <rect x="50" y="260" width="180" height="8" rx="4" fill="#565f89"/>
+  <text x="175" y="320" text-anchor="middle" fill="#a9b1d6" font-family="Inter, sans-serif" font-size="14">Imagen sobre mí</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg width="400" height="200" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="200" fill="#1e1f2c"/>
+  <rect x="50" y="40" width="300" height="120" rx="16" fill="#414868"/>
+  <circle cx="100" cy="80" r="15" fill="#7aa2f7"/>
+  <circle cx="150" cy="80" r="15" fill="#bb9af7"/>
+  <circle cx="200" cy="80" r="15" fill="#f7768e"/>
+  <circle cx="250" cy="80" r="15" fill="#9ece6a"/>
+  <circle cx="300" cy="80" r="15" fill="#e0af68"/>
+  <circle cx="100" cy="120" r="15" fill="#ff9e64"/>
+  <circle cx="150" cy="120" r="15" fill="#7dcfff"/>
+  <circle cx="200" cy="120" r="15" fill="#73daca"/>
+  <circle cx="250" cy="120" r="15" fill="#b4f9f8"/>
+  <circle cx="300" cy="120" r="15" fill="#c0caf5"/>
+  <text x="200" y="185" text-anchor="middle" fill="#a9b1d6" font-family="Inter, sans-serif" font-size="12">SVGL - SVG Logos Library</text>
+</svg>

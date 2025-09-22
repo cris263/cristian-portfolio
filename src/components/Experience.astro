@@ -1,0 +1,303 @@
+---
+const experiences = [
+  {
+    title: "Estudiante de Ingeniería",
+    company: "Desarrollo Personal",
+    period: "Actualmente...",
+    description: "3 años estudiando y aplicando tecnologías de vanguardia como React, Java, SpringBoot, C++, Python, Go y arquitectura de software. Enfoque en desarrollo full stack y estructuras de datos.",
+    link: "#",
+    current: true
+  },
+  {
+    title: "Desarrollador Full Stack",
+    company: "Facultad de Económicas - Universidad de los Llanos",
+    period: "Febrero - Junio 2024",
+    description: "Desarrollo de página administrable para la Facultad de Económicas. Implementación de sistema completo usando Strapi como headless CMS, React para el frontend y SpringBoot para el backend. 4 meses de desarrollo.",
+    link: "#",
+    current: false
+  }
+];
+---
+
+<section id="experiencia" class="experience">
+  <div class="container">
+    <div class="section-header">
+      <h2 class="section-title">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+        </svg>
+        Experiencia laboral
+      </h2>
+    </div>
+
+    <div class="timeline">
+      {experiences.map((exp, index) => (
+        <div class="timeline-item" data-aos="fade-up" data-aos-delay={index * 100}>
+          <div class="timeline-dot">
+            {exp.current && <div class="pulse-ring"></div>}
+          </div>
+          
+          <div class="timeline-content">
+            <div class="experience-card">
+              <div class="experience-header">
+                <div class="experience-info">
+                  <h3 class="experience-title highlight">{exp.title}</h3>
+                  <h4 class="experience-company">{exp.company}</h4>
+                  <span class="experience-period">{exp.period}</span>
+                </div>
+                
+                {exp.current && (
+                  <div class="current-badge">
+                    <span class="current-dot"></span>
+                    Actual
+                  </div>
+                )}
+              </div>
+              
+              <p class="experience-description">
+                {exp.description}
+              </p>
+              
+              <a href={exp.link} class="experience-link">
+                Saber más
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17l9.2-9.2M17 17V7H7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .experience {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #1a1b26 0%, #16161e 100%);
+    position: relative;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .section-title {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #c9d1d9;
+    margin-bottom: 1rem;
+  }
+
+  .section-title svg {
+    color: #7aa2f7;
+  }
+
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, #7aa2f7, #bb9af7);
+    border-radius: 2px;
+  }
+
+  .timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 80px;
+  }
+
+  .timeline-dot {
+    position: absolute;
+    left: 22px;
+    top: 24px;
+    width: 16px;
+    height: 16px;
+    background: #7aa2f7;
+    border: 3px solid #1a1b26;
+    border-radius: 50%;
+    z-index: 2;
+  }
+
+  .pulse-ring {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #7aa2f7;
+    border-radius: 50%;
+    animation: pulse-ring 2s infinite;
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.8);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+
+  .experience-card {
+    background: rgba(30, 31, 44, 0.5);
+    border: 1px solid rgba(65, 72, 104, 0.3);
+    border-radius: 1rem;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .experience-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #7aa2f7, #bb9af7, #f7768e);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .experience-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(122, 162, 247, 0.5);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .experience-card:hover::before {
+    opacity: 1;
+  }
+
+  .experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .experience-company {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #c9d1d9;
+    margin-bottom: 0.25rem;
+  }
+
+  .experience-period {
+    font-size: 0.875rem;
+    color: #7c7c7c;
+  }
+
+  .current-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(34, 197, 94, 0.1);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    border-radius: 50px;
+    color: #22c55e;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+  }
+
+  .current-dot {
+    width: 6px;
+    height: 6px;
+    background: #22c55e;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
+  .experience-description {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    color: #a9b1d6;
+  }
+
+  .experience-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #e0af68;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+
+  .experience-link:hover {
+    color: #f0bf78;
+    transform: translateX(4px);
+  }
+
+  .experience-link svg {
+    transition: transform 0.3s ease;
+  }
+
+  .experience-link:hover svg {
+    transform: translate(2px, -2px);
+  }
+
+  @media (max-width: 768px) {
+    .experience {
+      padding: 4rem 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+    }
+
+    .timeline::before {
+      left: 20px;
+    }
+
+    .timeline-item {
+      padding-left: 60px;
+    }
+
+    .timeline-dot {
+      left: 12px;
+    }
+
+    .experience-card {
+      padding: 1.5rem;
+    }
+
+    .experience-header {
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .current-badge {
+      align-self: flex-start;
+    }
+  }
+</style>
